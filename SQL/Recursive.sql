@@ -1,0 +1,10 @@
+WITH RECURSIVE CTE(cte count(n)) AS(
+	SELECT 0 as HOUR
+    	UNION ALL
+    	SELECT HOUR + 1
+    	FROM CTE
+    	WHERE HOUR < 23
+    	)
+
+SELECT n
+FROM CTE;
