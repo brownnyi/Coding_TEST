@@ -1,5 +1,8 @@
 a, x = map(int, input().split())
-n_list = list(map(int, input().split()))
+n_list = input().split()
+result = []
 for i in n_list:
-    if i < x:
-        print(i, end = " ")
+    if int(i) < x:
+        result.append(i)
+
+print(' '.join(result))
