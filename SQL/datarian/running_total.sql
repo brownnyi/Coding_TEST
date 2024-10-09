@@ -13,3 +13,5 @@ FROM
   measurements as m1
 ORDER BY
   measured_at
+
+-- WHERE m2.measured_at <= m1.measured_at 도 가능
