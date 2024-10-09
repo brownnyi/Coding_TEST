@@ -15,3 +15,11 @@ FROM
   JOIN total_revenue as B ON A.day = B.day
 ORDER BY
   1 DESC;
+
+-- WITH 별칭1 AS(
+-- ...
+-- ), 별칭2 AS(
+-- ...
+-- ), 별칭3 AS(
+-- ...
+-- ) ... 가능
