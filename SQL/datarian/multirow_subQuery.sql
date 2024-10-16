@@ -1,8 +1,8 @@
 SELECT *
-FROM tips
+FROM A
 WHERE day in (
   SELECT day
-  FROM tips
+  FROM A
   GROUP BY day
-  HAVING SUM(total_bill) >= 1500
+  HAVING SUM(bill) >= 1500
   )
