@@ -1,19 +1,19 @@
 SELECT
-  customer_id,
-  MIN(order_date) as first_order_date,
-  MAX(order_date) as last_order_date,
-  COUNT(DISTINCT order_date) as cnt_orders,
+  id,
+  MIN(date) as first_order_date,
+  MAX(date) as last_order_date,
+  COUNT(DISTINCT date) as cnt_orders,
   SUM(sales) as sum_sales
 FROM
-  records
+  A
 GROUP BY
-  customer_id
+  id
 
 
 SELECT
   DATE_FORMAT(first_order_date, '%Y-%m-01') as first_order_month,
-  COUNT(DISTINCT customer_id)
+  COUNT(DISTINCT id)
 FROM
-  customer_stats
+  B
 GROUP BY
   first_order_month
