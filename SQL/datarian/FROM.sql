@@ -1,7 +1,7 @@
 WITH daily_sales as (
   SELECT day,
-        SUM(total_bill) as sales
-  FROM tips
+        SUM(bill) as sales
+  FROM A
   GROUP BY day
 )
 
@@ -10,7 +10,7 @@ FROM daily_sales
 
 -- SELECT AVG(sales)
 -- FROM (
---   SELECT day, SUM(total_bill) as sales
---   FROM tips
+--   SELECT day, SUM(bill) as sales
+--   FROM A
 --   GROUP BY day
 -- ) as daily_sales
